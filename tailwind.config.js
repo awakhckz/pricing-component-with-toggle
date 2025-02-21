@@ -12,6 +12,8 @@ module.exports = {
       backgroundImage: {
         linear:
           "linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%))",
+          bgtop: 'url(./images/bg-top.svg)',
+          bgbottom: 'url(./images/bg-bottom.svg)'
       },
       fontFamily: {
         Montserrat: '"Montserrat", serif',

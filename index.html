@@ -59,10 +59,16 @@
     </style>
   </head>
   <body
-    class="flex flex-col items-center justify-center gap-12 font-Montserrat p-4 text-GrayishBlue"
+    class="flex flex-col relative bg-VeryLightGrayishBlue items-center justify-center gap-12 font-Montserrat p-4 text-GrayishBlue"
   >
-    <p class="text-2xl font-semibold">Our Pricing</p>
-    <div class="flex gap-4 text-xl font-semibold">
+  <div class="top absolute top-0 -right-32 md:right-0 w-fit h-fit">
+    <img src="images/bg-top.svg" alt="background-image">
+  </div>
+  <div class="top absolute bottom-0 left-0 w-fit h-fit">
+    <img src="images/bg-bottom.svg" alt="background-image">
+  </div>
+    <p class="text-2xl font-semibold z-10">Our Pricing</p>
+    <div class="flex gap-4 text-xl font-semibold z-10">
       Annually
       <div class="toggle cursor-pointer flex items-center bg-LightGrayishBlue h-8 w-16 rounded-full">
         <input type="checkbox" name="checkbox" id="check" class="peer hidden" />
@@ -75,10 +81,10 @@
     </div>
 
     <div
-      class="cards relative flex flex-col gap-6 w-full md:place-items-center md:flex-row max-w-[80%] md:gap-0 md:place-self-center"
+      class="cards relative flex flex-col gap-6 w-full place-items-center md:flex-row md:max-w-[80%] md:gap-0 md:place-self-center"
     >
       <div
-        class="basic w-full bg-white flex flex-col gap-8 items-center p-8 rounded-lg max-w-full"
+        class="basic w-full bg-white flex flex-col gap-8 items-center p-8 rounded-lg max-w-[500px]"
         style="box-shadow: 3px 2px 35px #cecece"
       >
         <p class="text-xl font-semibold">Basic</p>
