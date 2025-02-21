@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Pricing Component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .selected {
+        background-image: linear-gradient(
+          to right,
+          hsl(236, 72%, 79%),
+          hsl(237, 63%, 64%)
+        );
+        color: #fff;
+        box-shadow: 3px 2px 40px #c0bdbd;
+        padding: 3rem 2rem;
+        /* position: absolute; */
+        z-index: 1;
+      }
+
+      .selected button {
+        background: #fff;
+        color: rgb(85, 85, 252);
+      }
+      .selected button:hover {
+        background: transparent;
+        border: 2px solid white;
+        color: #fff;
+      }
+
+      .selected .price {
+        color: #fff;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body
+    class="flex flex-col items-center justify-center gap-12 font-Montserrat p-4 text-GrayishBlue"
+  >
+    <p class="text-2xl font-semibold">Our Pricing</p>
+    <div class="flex gap-4 text-xl font-semibold">
+      Annually
+      <div class="toggle cursor-pointer flex items-center bg-LightGrayishBlue h-8 w-16 rounded-full">
+        <input type="checkbox" name="checkbox" id="check" class="peer hidden" />
+        <label
+          for="check"
+          class="button cursor-pointer flex items-center h-full w-full rounded-full px-1 hover:bg-none bg-linear before:w-6 before:h-6 before:bg-white before:rounded-full before:transition-all before:peer-checked:translate-x-8 hover:bg-LightGrayishBlue"
+        ></label>
+      </div>
+      Monthly
+    </div>
+
+    <div
+      class="cards relative flex flex-col gap-6 w-full md:place-items-center md:flex-row max-w-[80%] md:gap-0 md:place-self-center"
+    >
+      <div
+        class="basic w-full bg-white flex flex-col gap-8 items-center p-8 rounded-lg max-w-full"
+        style="box-shadow: 3px 2px 35px #cecece"
+      >
+        <p class="text-xl font-semibold">Basic</p>
+        <p class="annual price text-[50px] text-DarkGrayishBlue font-bold">
+          &dollar;199.99
+        </p>
+        <p
+          class="monthly hidden price text-[50px] text-DarkGrayishBlue font-bold"
+        >
+          &dollar;19.99
+        </p>
+        <div
+          class="features flex flex-col gap-4 font-semibold w-full text-center text-lg"
+        >
+          <hr class="w-full h-2" />
+          <p>500 GB Storage</p>
+          <hr class="w-full h-2" />
+          <p>2 Users Allowed</p>
+          <hr class="w-full h-2" />
+          <p>Send up to 3 GB</p>
+          <hr class="w-full h-2" />
+        </div>
+        <button
+          class="learn bg-linear text-lg text-white w-full p-3 rounded-lg hover:bg-none hover:border-2 hover:border-blue-700 hover:text-blue-700 font-semibold capitalize"
+        >
+          Learn More
+        </button>
+      </div>
+      <div
+        class="pro selected w-full bg-white flex flex-col gap-8 items-center p-8 rounded-lg max-w-[500px]"
+        style="box-shadow: 3px 2px 35px #cecece"
+      >
+        <p class="text-xl font-semibold">Professional</p>
+        <p class="annualpro price text-[50px] text-DarkGrayishBlue font-bold">
+          &dollar;249.99
+        </p>
+        <p
+          class="monthlypro hidden price text-[50px] text-DarkGrayishBlue font-bold"
+        >
+          &dollar;24.99
+        </p>
+        <div
+          class="features flex flex-col gap-4 font-semibold w-full text-center text-lg"
+        >
+          <hr class="w-full h-2" />
+          <p>1 TB Storage</p>
+          <hr class="w-full h-2" />
+          <p>5 Users Allowed</p>
+          <hr class="w-full h-2" />
+          <p>Send up to 10 GB</p>
+          <hr class="w-full h-2" />
+        </div>
+        <button
+          class="lea hover:bg-whitern bg-linear text-lg text-white w-full p-3 rounded-lg hover:bg-none hover:border-2 hover:border-blue-700 hover:text-blue-700 font-semibold capitalize"
+        >
+          Learn More
+        </button>
+      </div>
+      <div
+        class="master w-full bg-white flex flex-col gap-8 items-center p-8 rounded-lg max-w-[500px]"
+        style="box-shadow: 3px 2px 35px #cecece"
+      >
+        <p class="text-xl font-semibold">Master</p>
+        <p class="annualmast price text-[50px] text-DarkGrayishBlue font-bold">
+          &dollar;399.99
+        </p>
+        <p
+          class="monthlymast hidden price text-[50px] text-DarkGrayishBlue font-bold"
+        >
+          &dollar;39.99
+        </p>
+        <div
+          class="features flex flex-col gap-4 font-semibold w-full text-center text-lg"
+        >
+          <hr class="w-full h-2" />
+          <p>2 TB Storage</p>
+          <hr class="w-full h-2" />
+          <p>10 Users Allowed</p>
+          <hr class="w-full h-2" />
+          <p>Send up to 20 GB/p></p>
+          <hr class="w-full h-2" />
+        </div>
+        <button
+          class="learn bg-linear text-lg text-white w-full p-3 rounded-lg hover:bg-none hover:border-2 hover:border-blue-700 hover:text-blue-700 font-semibold capitalize"
+        >
+          Learn More
+        </button>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/awakhckz">Tenon Czar</a>.
+    </div>
+  </body>
+
+  <script>
+    const toggle = document.querySelector("#check");
+    const monthly = document.querySelector(".monthly");
+    const monthlyPro = document.querySelector(".monthlypro");
+    const monthlyMaster = document.querySelector(".monthlymast");
+    const annual = document.querySelector(".annual");
+    const annualPro = document.querySelector(".annualpro");
+    const annualMaster = document.querySelector(".annualmast");
+    const cards = document.querySelector(".cards");
+    const children = Array.from(cards.children);
+
+    children.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelector(".selected")?.classList.remove("selected");
+
+        btn.classList.add("selected");
+      });
+    });
+
+    toggle.addEventListener("click", () => {
+      monthlyMaster.classList.toggle("hidden");
+      monthlyPro.classList.toggle("hidden");
+      monthly.classList.toggle("hidden");
+      annualMaster.classList.toggle("hidden");
+      annualPro.classList.toggle("hidden");
+      annual.classList.toggle("hidden");
+    });
+  </script>
+</html>
